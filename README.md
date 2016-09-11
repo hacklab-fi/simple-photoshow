@@ -2,6 +2,9 @@
 
 Just a simple ruby program that downloads new photos from a Flickr group plus instructions how to start the actual photo slideshow.
 
+Tested on RasPi3 running raspbian
+
+
 ### Starting manually
 
 Run the photo show with feh:
@@ -21,3 +24,11 @@ chmod a+x launch_photoshow.sh
 .sh file checks if a feh process is running - if not, then it launches a new one
 
 Ruby script now launched on every startup and every hour.
+
+### Energy saver settings
+
+(using raspbian)
+
+edit your /etc/lightdm/lightdm.conf
+in [SeatDefaults] add:
+xserver-command=X -s 0 -dpms
