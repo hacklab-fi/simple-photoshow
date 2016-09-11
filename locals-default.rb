@@ -5,6 +5,7 @@
 
 # Select which group pics to download
 
+# example, hacklab.fi: MY_group_id = "2892234@N22"
 MY_group_id = "000000@N22"
 
 
