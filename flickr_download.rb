@@ -18,6 +18,16 @@ require 'open-uri'
 $mylog = Logger.new(LOG_path+'flickr_download_log.txt', 10, 1024000)
 $mylog.info("Start ---->")
 
+# If there is no internet connection, exit
+begin
+  # We trust google is up
+  open("http://www.google.com")
+rescue
+  $mylog.info("---> no internet connection")
+  exit
+end
+
+
 FlickRaw.api_key = MY_api_key
 FlickRaw.shared_secret = MY_shared_secret
 
