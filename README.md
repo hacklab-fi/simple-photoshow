@@ -4,6 +4,11 @@ Just a simple ruby program that downloads new photos from a Flickr group, plus i
 
 Tested on RasPi3 running Raspbian (Jessie).
 
+### Edit your preferences
+
+Create file *locals.rb* using template *locals-default.rb* as an example.
+
+Go to your flickr preferences to get your API key. Finding your group id can be tricky with Flickr's user interface. One way is to hover your mouse cursor (!) over your buddy icon or *leave group* -button and see what reads in the status bar. It should be something like *0000000@N22*. Add these in your new *locals.rb* file.
 
 ### Starting manually
 
@@ -26,7 +31,7 @@ Run the photo show with feh:
 make the script executable:
 *chmod a+x launch_photoshow.sh*
 
-.sh file checks if a feh process is running - if not, then it launches a new one after 3 mins.
+.sh file checks if a feh process is running - if not, then it launches a new one within 3 mins.
 
 Ruby script now launched on every startup and every hour.
 
