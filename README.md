@@ -8,7 +8,9 @@ Tested on RasPi3 running Raspbian (Jessie).
 
 Create file *locals.rb* using template *locals-default.rb* as an example.
 
-Go to your flickr preferences to get your API key. Finding your group id can be tricky with Flickr's user interface. One way is to hover your mouse cursor (!) over your buddy icon or *leave group* -button and see what reads in the status bar. It should be something like *0000000@N22*. Add these in your new *locals.rb* file.
+Go to your flickr preferences to get your API key.
+
+Finding your group id can be tricky with Flickr's user interface. One way is to hover your mouse cursor (!) over your buddy icon or *leave group* -button and see what reads in the status bar. It should be something like *0000000@N22*. Add these in your new *locals.rb* file. Flickr API has *flickr.urls.lookupGroup* function to look up this number.
 
 ### Starting manually
 
